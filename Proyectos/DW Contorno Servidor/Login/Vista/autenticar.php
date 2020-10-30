@@ -10,8 +10,7 @@ $autenticacionMock = new autenticacionMock;
 $user = $autenticacionMock->autenticarUsuario($username, $pwd);
 
 if ($user==true){
-    // datosUsuario.php;
+    header("Location: datosUsuario.php");
 }else{
-    +
-    // errorAutenticacion.php;
+    header("Location: errorAutenticacion.php");
 }
