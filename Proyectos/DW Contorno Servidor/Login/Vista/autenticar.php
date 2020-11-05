@@ -9,8 +9,13 @@ $pwd = $_POST["pwd"];
 $autenticacionMock = new autenticacionMock;
 $user = $autenticacionMock->autenticarUsuario($username, $pwd);
 
-if ($user==true){
-    header("Location: datosUsuario.php");
-}else{
+if ($user==false){
+
+    $intentos=$_COOKIE['intentos'];
+    setcookie('intentos',$intentos+1,time()+15);
+    
     header("Location: errorAutenticacion.php");
+}else{
+    header("Location: datosUsuario.php");
 }
+?>

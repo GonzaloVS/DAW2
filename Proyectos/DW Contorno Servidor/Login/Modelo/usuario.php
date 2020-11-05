@@ -1,7 +1,5 @@
 <?php
 
-include_once 'C:\xampp\htdocs\Login\Vista\login.html';
-include_once 'C:\xampp\htdocs\Login\Vista\autenticar.php';
 
 class usuario{
     
